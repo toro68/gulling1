@@ -265,15 +265,18 @@ class WeatherVisualizer:
             humidity = self.df.loc[idx, 'relative_humidity']
             wind_gust = self.df.loc[idx, 'max(wind_speed_of_gust PT1H)']
             
+            # Initialiser total_risk som 0.0
+            total_risk = 0.0
+            
             # Sjekk om vi har alle nødvendige verdier
             if pd.isna([wind_speed, snow_depth, temp, humidity, wind_gust]).any():
-                return 0.0
+                return total_risk
                 
             # 1. Grunnleggende vilkår må være oppfylt
             if (humidity < 85 or  # Minimum luftfuktighet
                 temp > 0 or       # Må være minusgrader
                 snow_depth < 1):  # Må være snø på bakken
-                return 0.0
+                return total_risk
             
             # 2. Beregn delrisiko for hver parameter
             wind_risk = self._calculate_wind_risk(wind_speed, wind_gust)

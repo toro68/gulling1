@@ -16,7 +16,7 @@ class FrostDataFetcher:
     def __init__(self, config: FrostConfig):
         self.config = config
         self.session = requests.Session()
-        self.session.auth = (config.CLIENT_ID, "")
+        self.session.auth = (str(config.CLIENT_ID).strip(), '')
         self.logger = logging.getLogger(self.__class__.__name__)
         
     def _fetch_chunk(self, start_date: str, end_date: str) -> pd.DataFrame:
