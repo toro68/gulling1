@@ -231,15 +231,19 @@ class WeatherVisualizer:
             for idx in self.df.index:
                 risk_series[idx] = self._calculate_snow_drift_risk(idx)
             
-            # Legg til søyler i grafen
+            # Definer fargegradering basert på risikonivå
+            colors = risk_series.apply(
+                lambda x: f'rgba({int(255*x)},0,{int(255*(1-x))},{0.7})'  # Rød til grønn gradering
+            )
+            
+            # Legg til søyler i grafen med forbedret hover
             fig.add_trace(
                 go.Bar(
                     x=risk_series.index,
                     y=risk_series * 100,
                     name="Snøfokk-risiko",
-                    marker_color=risk_series.apply(
-                        lambda x: f'rgba({int(255*x)},0,0,0.6)'
-                    ),
+                    marker_color=colors,
+                    showlegend=True,
                     hovertemplate=(
                         "Tidspunkt: %{x}<br>" +
                         "Risiko: %{y:.1f}%<br>" +
@@ -747,16 +751,13 @@ class WeatherVisualizer:
             # Beregn risiko for hvert tidspunkt
             risk_data = []
             for idx in self.df.index:
-                # Hent nødvendige verdier
                 temp = self.df.loc[idx, 'air_temperature']
                 snow_depth = self.df.loc[idx, 'surface_snow_thickness']
                 precip = self.df.loc[idx, 'sum(precipitation_amount PT1H)']
                 
-                # Beregn endring i snødybde
                 snow_depth_change = snow_depth - self.df.loc[idx - pd.Timedelta(hours=1), 'surface_snow_thickness'] \
                     if idx - pd.Timedelta(hours=1) in self.df.index else 0
                 
-                # Beregn risiko
                 risk = self._calculate_ice_risk_scenarios(
                     temp=temp,
                     precip=precip,
@@ -765,62 +766,29 @@ class WeatherVisualizer:
                     idx=idx
                 )
                 
-                # Lag forklarende tekst
-                conditions = []
-                if temp > 0 and not pd.isna(precip) and precip > 0:
-                    if snow_depth > 0:
-                        conditions.append("Regn på snø/issåle")
-                    else:
-                        conditions.append("Regn som kan fryse")
-                elif -1 < temp <= 2 and not pd.isna(precip) and precip > 0:
-                    if snow_depth_change > 0.1:
-                        conditions.append("Snø som kan bli glatt")
-                    elif snow_depth_change < -0.1:
-                        conditions.append("Smelting med fare for is")
-                    else:
-                        conditions.append("Sludd med isfare")
-                
-                # Legg til data for dette tidspunktet
                 risk_data.append({
                     'timestamp': idx,
-                    'risk': risk * 100,
-                    'temp': temp,
-                    'snow_depth': snow_depth,
-                    'precip': precip if not pd.isna(precip) else 0,
-                    'snow_change': snow_depth_change,
-                    'conditions': ', '.join(conditions) if conditions else 'Ingen spesielle forhold'
+                    'risk': risk * 100
                 })
             
-            # Konverter til DataFrame for enklere håndtering
             risk_df = pd.DataFrame(risk_data)
             
-            # Legg til søyler i grafen med forbedret hover
+            # Definer fargegradering for glatte veier (blå til rød)
+            colors = risk_df['risk'].apply(
+                lambda x: f'rgba({int(255*(x/100))},0,{int(255*(1-(x/100)))},{0.7})'
+            )
+            
+            # Legg til søyler i grafen
             fig.add_trace(
                 go.Bar(
                     x=risk_df['timestamp'],
                     y=risk_df['risk'],
-                    name="Glatte veier",
-                    marker=dict(
-                        color=risk_df['risk'].apply(
-                            lambda x: f'rgba({int(255*(x/100))},0,0,0.6)'
-                        )
-                    ),
-                    width=3600000,  # 1 time i millisekunder
-                    customdata=np.column_stack((
-                        risk_df['temp'],
-                        risk_df['snow_depth'],
-                        risk_df['precip'],
-                        risk_df['snow_change'],
-                        risk_df['conditions']
-                    )),
+                    name="Glatte veier-risiko",
+                    marker_color=colors,
+                    showlegend=True,
                     hovertemplate=(
-                        "<b>Tidspunkt:</b> %{x|%Y-%m-%d %H:%M}<br>" +
-                        "<b>Risiko:</b> %{y:.1f}%<br>" +
-                        "<b>Temperatur:</b> %{customdata[0]:.1f}°C<br>" +
-                        "<b>Snødybde:</b> %{customdata[1]:.1f}cm<br>" +
-                        "<b>Nedbør:</b> %{customdata[2]:.1f}mm/t<br>" +
-                        "<b>Snøendring:</b> %{customdata[3]:.1f}cm<br>" +
-                        "<b>Forhold:</b> %{customdata[4]}<br>" +
+                        "Tidspunkt: %{x}<br>" +
+                        "Risiko: %{y:.1f}%<br>" +
                         "<extra></extra>"
                     )
                 ),
@@ -902,36 +870,28 @@ class WeatherVisualizer:
                 title_text="Risiko (%)",
                 range=[0, 100],
                 tickmode='array',
-                ticktext=['0%', '20%', '40%', '60%', '80%', '100%'],
-                tickvals=[0, 20, 40, 60, 80, 100],
+                ticktext=['0%', '25%', '50%', '75%', '100%'],
+                tickvals=[0, 25, 50, 75, 100],
                 row=row, col=1
             )
             
-            # Legg til horisontale linjer for risikonivåer med tynnere strek
+            # Legg til risikonivåer med konsistente farger
             risk_levels = [
-                (80, "Høy risiko", "red"),
-                (60, "Moderat risiko", "orange"),
-                (40, "Lav risiko", "yellow")
+                (75, "Høy risiko", "rgba(255,0,0,0.3)"),
+                (50, "Moderat risiko", "rgba(255,165,0,0.3)"),
+                (25, "Lav risiko", "rgba(255,255,0,0.3)")
             ]
             
             for level, label, color in risk_levels:
                 fig.add_hline(
                     y=level,
                     line_dash="dot",
-                    line_width=0.5,  # Tynnere horisontal linje
+                    line_width=1,
                     line_color=color,
                     annotation_text=label,
                     annotation_position="right",
                     row=row, col=1
                 )
-
-            # Oppdater bredden på søylene for tydeligere vertikale linjer
-            fig.update_traces(
-                selector=dict(type='bar'),
-                width=1000*3600*0.8,  # Juster bredden på søylene (80% av original)
-                opacity=1,  # Øk opasiteten for tydeligere søyler
-                row=row
-            )
                 
         except Exception as e:
             self.logger.error(f"Feil ved konfigurering av varselgraf: {e}")
@@ -942,94 +902,49 @@ class WeatherVisualizer:
             if self.df is None or self.df.empty:
                 return
                 
-            # Hent relevante kolonner
+            # Definer fargekoder for nedbørstyper
+            colors = {
+                'snow': 'rgba(0, 150, 255, 0.7)',  # Blå for snø
+                'sleet': 'rgba(128, 0, 128, 0.7)', # Lilla for sludd
+                'rain': 'rgba(0, 200, 0, 0.7)'     # Grønn for regn
+            }
+            
             precip = self.df['sum(precipitation_amount PT1H)']
             temp = self.df['air_temperature']
-            snow_depth = self.df['surface_snow_thickness']
             
-            # Beregn endring i snødybde
-            snow_depth_change = snow_depth.diff()
+            # Kategoriser nedbør
+            snow_mask = temp <= 0
+            rain_mask = temp > 2
+            sleet_mask = (temp > 0) & (temp <= 2)
             
-            # Definer masker for sikre soner
-            definite_snow = (temp <= -1) & (precip > 0)  # Garantert snø når det er kaldt nok
-            definite_rain = (temp > 2) & (precip > 0)    # Garantert regn når det er varmt nok
-            
-            # Overgangsone (-1°C til +2°C) - kategoriser basert på snødybdeendring
-            transition_zone = (temp > -1) & (temp <= 2) & (precip > 0)
-            snow_in_transition = transition_zone & (snow_depth_change > 0.1)  # Økende snødybde
-            rain_in_transition = transition_zone & (snow_depth_change < -0.1) # Minkende snødybde
-            mix_in_transition = transition_zone & (abs(snow_depth_change) <= 0.1)  # Stabil snødybde
-            
-            # Kombiner masker
-            snow_mask = definite_snow | snow_in_transition
-            rain_mask = definite_rain | rain_in_transition
-            mix_mask = mix_in_transition
-            
-            # Legg til vertikale søyler for hver type
-            fig.add_trace(
-                go.Bar(
-                    x=self.df[snow_mask].index,
-                    y=precip[snow_mask],
-                    name='Snø',
-                    marker_color='rgba(0, 0, 255, 0.6)',
-                    width=1000*3600,
-                    hovertemplate=(
-                        "Tidspunkt: %{x}<br>" +
-                        "Mengde: %{y:.1f} mm/t<br>" +
-                        "Type: Snø<br>" +
-                        "Temp: %{customdata[0]:.1f}°C<br>" +
-                        "Snøendring: %{customdata[1]:.1f} cm<br>" +
-                        "<extra></extra>"
-                    ),
-                    customdata=self.df[snow_mask][['air_temperature', 'surface_snow_thickness']].diff()
-                ),
-                row=row, col=1
-            )
-            
-            fig.add_trace(
-                go.Bar(
-                    x=self.df[mix_mask].index,
-                    y=precip[mix_mask],
-                    name='Sludd',
-                    marker_color='rgba(128, 0, 128, 0.6)',
-                    width=1000*3600,
-                    hovertemplate=(
-                        "Tidspunkt: %{x}<br>" +
-                        "Mengde: %{y:.1f} mm/t<br>" +
-                        "Type: Sludd<br>" +
-                        "Temp: %{customdata[0]:.1f}°C<br>" +
-                        "Snøendring: %{customdata[1]:.1f} cm<br>" +
-                        "<extra></extra>"
-                    ),
-                    customdata=self.df[mix_mask][['air_temperature', 'surface_snow_thickness']].diff()
-                ),
-                row=row, col=1
-            )
-            
-            fig.add_trace(
-                go.Bar(
-                    x=self.df[rain_mask].index,
-                    y=precip[rain_mask],
-                    name='Regn',
-                    marker_color='rgba(255, 0, 0, 0.6)',
-                    width=1000*3600,
-                    hovertemplate=(
-                        "Tidspunkt: %{x}<br>" +
-                        "Mengde: %{y:.1f} mm/t<br>" +
-                        "Type: Regn<br>" +
-                        "Temp: %{customdata[0]:.1f}°C<br>" +
-                        "Snøendring: %{customdata[1]:.1f} cm<br>" +
-                        "<extra></extra>"
-                    ),
-                    customdata=self.df[rain_mask][['air_temperature', 'surface_snow_thickness']].diff()
-                ),
-                row=row, col=1
-            )
+            # Legg til hver nedbørstype separat
+            for precip_type, mask, color in [
+                ('Snø', snow_mask, colors['snow']),
+                ('Sludd', sleet_mask, colors['sleet']),
+                ('Regn', rain_mask, colors['rain'])
+            ]:
+                if any(mask):
+                    fig.add_trace(
+                        go.Bar(
+                            x=self.df[mask].index,
+                            y=precip[mask],
+                            name=precip_type,
+                            marker_color=color,
+                            showlegend=True,
+                            hovertemplate=(
+                                "Tidspunkt: %{x}<br>" +
+                                f"Type: {precip_type}<br>" +
+                                "Mengde: %{y:.1f} mm/t<br>" +
+                                "<extra></extra>"
+                            )
+                        ),
+                        row=row, col=1
+                    )
             
             # Konfigurer y-aksen
             fig.update_yaxes(
                 title_text="Nedbør (mm/t)",
-                range=[0, max(precip) * 1.1],
+                range=[0, max(precip) * 1.1] if not precip.empty else [0, 1],
                 row=row, col=1
             )
             
