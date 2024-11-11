@@ -835,16 +835,19 @@ class WeatherVisualizer:
         Beregner risiko for glatte veier basert på vinterveifysikk.
         """
         try:
+            # Initialiser total_risk
+            total_risk = 0.0
+            
             # Hvis vi mangler kritiske data, returner ingen risiko
             if pd.isna([temp, snow_depth, precip]).any():
-                return 0.0
+                return total_risk
                 
             # Ingen risiko hvis:
             # - temperaturen er under 0
             # - snødybden øker
             # - ingen nedbør
             if temp <= 0 or snow_depth_change > 0 or precip <= 0:
-                return 0.0
+                return total_risk
             
             # Beregn samlet snøsmelting over de siste 3 timene
             cumulative_melt = 0
@@ -858,36 +861,19 @@ class WeatherVisualizer:
                         if current_change < 0:  # Bare tell med smelting
                             cumulative_melt += abs(current_change)
             
-            # Beregn faktorer som brukes i flere scenarier
-            melt_intensity = abs(snow_depth_change)  # Nåværende smeltehastighet
-            rain_intensity = precip  # Nedbørintensitet
+            # Beregn nedbørsintensitet
+            rain_intensity = precip
+            rain_factor = min(0.5, rain_intensity * 0.2)
             
-            # SCENARIO 1: Kombinert regn og snøsmelting
-            if snow_depth_change <= -0.5 and 0 < temp <= 2:
-                # Basisrisiko
-                total_risk = 0.5
-                
-                # Øk risiko basert på kombinasjonen av regn og smelting
-                current_melt_factor = min(1.0, melt_intensity / 0.5)  # 0.5cm/t gir maks
-                cumulative_melt_factor = min(1.0, cumulative_melt / 1.5)  # 1.5cm over 3t gir maks
-                rain_factor = min(1.0, rain_intensity / 2.0)  # 2mm/t gir maks
-                
-                # Kombiner faktorer med vekt på kumulativ smelting
-                melt_combined = (current_melt_factor * 0.4 + cumulative_melt_factor * 0.6)
-                
-                # Synergy bonus når både regn og smelting er betydelig
-                synergy_bonus = melt_combined * rain_factor * 0.4
-                
-                total_risk += melt_combined * 0.3 + synergy_bonus
-                
-                # Ekstra risiko ved vedvarende smelting
-                if cumulative_melt >= 1.0:  # Betydelig samlet smelting
-                    total_risk = min(1.0, total_risk + (cumulative_melt - 1.0) * 0.3)
+            # SCENARIO 1: Kraftig regn på snø
+            if rain_intensity > 2.0 and snow_depth > 0:
+                total_risk = max(total_risk, 0.7)
+                if temp > 2:
+                    total_risk += 0.2
             
-            # SCENARIO 2: Regn på is/snøsåle
-            elif snow_depth > 0:
-                total_risk = 0.4
-                rain_factor = min(0.3, rain_intensity * 0.15)
+            # SCENARIO 2: Moderat regn og smelting
+            elif rain_intensity > 0.5 and cumulative_melt > 0:
+                total_risk = max(total_risk, 0.4)
                 cumulative_melt_factor = min(0.3, cumulative_melt * 0.4)
                 total_risk += rain_factor + cumulative_melt_factor
             
