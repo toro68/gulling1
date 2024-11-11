@@ -1,0 +1,1880 @@
+}%                                                                              tor.inge.jossang@aftenbladet.no@A121779-NO ~ % curl -X GET \
+  'https: //frost.met.no/observations/availableTimeSeries/v0.jsonld?sources=SN46220' \
+  -u '43fefca2-a26b-415b-954d-ba9af37e3e1f:'
+{
+    "@context": "https://frost.met.no/schema",
+    "@type": "ObservationTimeSeriesResponse",
+    "apiVersion": "v0",
+    "license": "https://creativecommons.org/licenses/by/3.0/no/",
+    "createdAt": "2024-11-10T09:23:35Z",
+    "queryTime": 0.243,
+    "currentItemCount": 116,
+    "itemsPerPage": 116,
+    "offset": 0,
+    "totalItemCount": 116,
+    "currentLink": "https://frost.met.no//observations/availableTimeSeries/v0.jsonld?sources=SN46220",
+    "data": [
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "integral_of_excess(mean(air_temperature P1D) P1D 5.0)",
+            "unit": "degree-day",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=integral_of_excess(mean(air_temperature P1D) P1D 5.0)&timeoffsets=PT0H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-11T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "surface_snow_thickness",
+            "unit": "cm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-11T00:00:00.000Z/9999-12-31T23:59:59Z&elements=surface_snow_thickness&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-12T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "surface_snow_thickness",
+            "unit": "cm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-12T00:00:00.000Z/9999-12-31T23:59:59Z&elements=surface_snow_thickness&timeoffsets=PT6H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT10M",
+            "timeSeriesId": 0,
+            "elementId": "surface_snow_thickness",
+            "unit": "cm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=surface_snow_thickness&timeoffsets=PT0H&timeresolutions=PT10M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "max(wind_speed_of_gust P1M)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(wind_speed_of_gust P1M)&timeoffsets=PT18H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "mean(air_temperature P1D)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(air_temperature P1D)&timeoffsets=PT0H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-08T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "mean(air_temperature P1D)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-08T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(air_temperature P1D)&timeoffsets=PT6H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P3M",
+            "timeSeriesId": 0,
+            "elementId": "best_estimate_mean(air_temperature P3M)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=best_estimate_mean(air_temperature P3M)&timeoffsets=PT0H&timeresolutions=P3M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P3M",
+            "timeSeriesId": 0,
+            "elementId": "mean(air_temperature_anomaly P3M 1991_2020)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(air_temperature_anomaly P3M 1991_2020)&timeoffsets=PT0H&timeresolutions=P3M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "mean(max(air_temperature P1D) P1M)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(max(air_temperature P1D) P1M)&timeoffsets=PT18H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P3M",
+            "timeSeriesId": 0,
+            "elementId": "mean(air_temperature P3M)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(air_temperature P3M)&timeoffsets=PT0H&timeresolutions=P3M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "mean(surface_snow_thickness P1M)",
+            "unit": "cm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(surface_snow_thickness P1M)&timeoffsets=PT6H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT10M",
+            "timeSeriesId": 0,
+            "elementId": "sum(duration_of_precipitation PT10M)",
+            "unit": "minutes",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=sum(duration_of_precipitation PT10M)&timeoffsets=PT0H&timeresolutions=PT10M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "sum(precipitation_amount P1M)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=sum(precipitation_amount P1M)&timeoffsets=PT6H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "sum(precipitation_amount P1M)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=sum(precipitation_amount P1M)&timeoffsets=PT18H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P3M",
+            "timeSeriesId": 0,
+            "elementId": "max(air_temperature P3M)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(air_temperature P3M)&timeoffsets=PT18H&timeresolutions=P3M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "integral_of_deficit(mean(air_temperature P1D) P1M 17.0)",
+            "unit": "degree-day",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=integral_of_deficit(mean(air_temperature P1D) P1M 17.0)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "min(wind_speed P1M)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(wind_speed P1M)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "over_time(time_of_maximum_air_temperature P1M)",
+            "unit": "Date",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=over_time(time_of_maximum_air_temperature P1M)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1Y",
+            "timeSeriesId": 0,
+            "elementId": "max(air_temperature P1Y)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(air_temperature P1Y)&timeoffsets=PT18H&timeresolutions=P1Y&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P6M",
+            "timeSeriesId": 0,
+            "elementId": "integral_of_deficit(mean(air_temperature P1D) P6M 17.0)",
+            "unit": "degree-day",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=integral_of_deficit(mean(air_temperature P1D) P6M 17.0)&timeoffsets=PT0H&timeresolutions=P6M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "mean(air_temperature P1M)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(air_temperature P1M)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "mean(air_temperature P1M)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(air_temperature P1M)&timeoffsets=PT6H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P3M",
+            "timeSeriesId": 0,
+            "elementId": "best_estimate_sum(precipitation_amount P3M)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=best_estimate_sum(precipitation_amount P3M)&timeoffsets=PT6H&timeresolutions=P3M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "PT12H",
+            "timeSeriesId": 0,
+            "elementId": "max(air_temperature PT12H)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(air_temperature PT12H)&timeoffsets=PT6H&timeresolutions=PT12H&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "sum(precipitation_amount P1D)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=sum(precipitation_amount P1D)&timeoffsets=PT6H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "sum(precipitation_amount P1D)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=sum(precipitation_amount P1D)&timeoffsets=PT18H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "max(wind_speed_of_gust PT1H)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(wind_speed_of_gust PT1H)&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "mean(air_temperature_anomaly P1M 1991_2020)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(air_temperature_anomaly P1M 1991_2020)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1Y",
+            "timeSeriesId": 0,
+            "elementId": "min(air_temperature P1Y)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(air_temperature P1Y)&timeoffsets=PT18H&timeresolutions=P1Y&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "mean(dew_point_temperature P1D)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(dew_point_temperature P1D)&timeoffsets=PT0H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "best_estimate_sum(precipitation_amount P1M)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=best_estimate_sum(precipitation_amount P1M)&timeoffsets=PT6H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "PT12H",
+            "timeSeriesId": 0,
+            "elementId": "min(air_temperature PT12H)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(air_temperature PT12H)&timeoffsets=PT6H&timeresolutions=PT12H&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P1Y",
+            "timeSeriesId": 0,
+            "elementId": "best_estimate_sum(precipitation_amount P6M)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=best_estimate_sum(precipitation_amount P6M)&timeoffsets=PT6H&timeresolutions=P1Y&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P6M",
+            "timeSeriesId": 0,
+            "elementId": "mean(air_temperature_anomaly P6M 1991_2020)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(air_temperature_anomaly P6M 1991_2020)&timeoffsets=PT0H&timeresolutions=P6M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2020-01-01T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P6M",
+            "timeSeriesId": 0,
+            "elementId": "sum(precipitation_amount P6M)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2020-01-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=sum(precipitation_amount P6M)&timeoffsets=PT6H&timeresolutions=P6M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P1Y",
+            "timeSeriesId": 0,
+            "elementId": "best_estimate_sum(precipitation_amount P1Y)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=best_estimate_sum(precipitation_amount P1Y)&timeoffsets=PT6H&timeresolutions=P1Y&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1Y",
+            "timeSeriesId": 0,
+            "elementId": "mean(air_temperature P1Y)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(air_temperature P1Y)&timeoffsets=PT0H&timeresolutions=P1Y&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P6M",
+            "timeSeriesId": 0,
+            "elementId": "min(air_temperature P6M)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(air_temperature P6M)&timeoffsets=PT18H&timeresolutions=P6M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "max(wind_speed PT1H)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(wind_speed PT1H)&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "min(air_temperature P1D)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(air_temperature P1D)&timeoffsets=PT18H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "min(air_temperature P1D)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(air_temperature P1D)&timeoffsets=PT0H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P3M",
+            "timeSeriesId": 0,
+            "elementId": "mean(air_temperature_anomaly P3M 1961_1990)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(air_temperature_anomaly P3M 1961_1990)&timeoffsets=PT0H&timeresolutions=P3M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "number_of_days_gte(sum(precipitation_amount P1D) P1M 1.0)",
+            "unit": "number of",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=number_of_days_gte(sum(precipitation_amount P1D) P1M 1.0)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "mean(wind_speed_of_gust P1M)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(wind_speed_of_gust P1M)&timeoffsets=PT18H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "mean(relative_humidity P1M)",
+            "unit": "percent",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(relative_humidity P1M)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "max(max(wind_speed P1D) P1M)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(max(wind_speed P1D) P1M)&timeoffsets=PT18H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "integral_of_deficit(mean(air_temperature P1D) P1D 17.0)",
+            "unit": "degree-day",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=integral_of_deficit(mean(air_temperature P1D) P1D 17.0)&timeoffsets=PT0H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-02-09T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "mean(wind_speed_of_gust P1D)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-09T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(wind_speed_of_gust P1D)&timeoffsets=PT18H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "integral_of_excess(mean(air_temperature P1D) P1M 5.0)",
+            "unit": "degree-day",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=integral_of_excess(mean(air_temperature P1D) P1M 5.0)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "mean(water_vapor_partial_pressure_in_air P1M)",
+            "unit": "hPa",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(water_vapor_partial_pressure_in_air P1M)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "wind_speed",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=wind_speed&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2020-01-01T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P1Y",
+            "timeSeriesId": 0,
+            "elementId": "sum(precipitation_amount P1Y)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2020-01-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=sum(precipitation_amount P1Y)&timeoffsets=PT6H&timeresolutions=P1Y&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "relative_humidity",
+            "unit": "percent",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=relative_humidity&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P6M",
+            "timeSeriesId": 0,
+            "elementId": "max(air_temperature P6M)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(air_temperature P6M)&timeoffsets=PT18H&timeresolutions=P6M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-02-09T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "max(wind_speed_of_gust P1D)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-09T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(wind_speed_of_gust P1D)&timeoffsets=PT18H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "min(surface_snow_thickness P1M)",
+            "unit": "cm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(surface_snow_thickness P1M)&timeoffsets=PT6H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P3M",
+            "timeSeriesId": 0,
+            "elementId": "integral_of_deficit(mean(air_temperature P1D) P3M 17.0)",
+            "unit": "degree-day",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=integral_of_deficit(mean(air_temperature P1D) P3M 17.0)&timeoffsets=PT0H&timeresolutions=P3M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-01T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "max(sum(precipitation_amount P1D) P1M)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(sum(precipitation_amount P1D) P1M)&timeoffsets=PT6H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P6M",
+            "timeSeriesId": 0,
+            "elementId": "mean(air_temperature P6M)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(air_temperature P6M)&timeoffsets=PT0H&timeresolutions=P6M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "mean(water_vapor_partial_pressure_in_air P1D)",
+            "unit": "hPa",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(water_vapor_partial_pressure_in_air P1D)&timeoffsets=PT0H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P3M",
+            "timeSeriesId": 0,
+            "elementId": "min(air_temperature P3M)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(air_temperature P3M)&timeoffsets=PT18H&timeresolutions=P3M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1Y",
+            "timeSeriesId": 0,
+            "elementId": "mean(air_temperature_anomaly P1Y 1961_1990)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(air_temperature_anomaly P1Y 1961_1990)&timeoffsets=PT0H&timeresolutions=P1Y&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "max(wind_speed P1M)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(wind_speed P1M)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-02-08T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "max(wind_speed P1D)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-08T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(wind_speed P1D)&timeoffsets=PT0H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2024-02-01T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "sum(precipitation_amount P30D)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2024-02-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=sum(precipitation_amount P30D)&timeoffsets=PT6H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "mean(wind_speed P1M)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(wind_speed P1M)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT10M",
+            "timeSeriesId": 0,
+            "elementId": "air_temperature",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=air_temperature&timeoffsets=PT0H&timeresolutions=PT10M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "air_temperature",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=air_temperature&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "min(air_temperature P1M)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(air_temperature P1M)&timeoffsets=PT18H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "max(relative_humidity P1M)",
+            "unit": "percent",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(relative_humidity P1M)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "min(max(wind_speed P1D) P1M)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(max(wind_speed P1D) P1M)&timeoffsets=PT18H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "over_time(sum(time_of_maximum_precipitation_amount P1D) P1M)",
+            "unit": "Date",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=over_time(sum(time_of_maximum_precipitation_amount P1D) P1M)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "mean(min(air_temperature P1D) P1M)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(min(air_temperature P1D) P1M)&timeoffsets=PT18H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "max_wind_speed(wind_from_direction PT1H)",
+            "unit": "degrees",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max_wind_speed(wind_from_direction PT1H)&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "max(air_temperature P1D)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(air_temperature P1D)&timeoffsets=PT18H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "max(air_temperature P1D)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(air_temperature P1D)&timeoffsets=PT0H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "max(surface_snow_thickness P1M)",
+            "unit": "cm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(surface_snow_thickness P1M)&timeoffsets=PT6H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1Y",
+            "timeSeriesId": 0,
+            "elementId": "best_estimate_mean(air_temperature P1Y)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=best_estimate_mean(air_temperature P1Y)&timeoffsets=PT0H&timeresolutions=P1Y&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2020-01-01T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "P3M",
+            "timeSeriesId": 0,
+            "elementId": "sum(precipitation_amount P3M)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2020-01-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=sum(precipitation_amount P3M)&timeoffsets=PT6H&timeresolutions=P3M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2022-12-08T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "over_time(gauge_content_difference PT1H)",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2022-12-08T00:00:00.000Z/9999-12-31T23:59:59Z&elements=over_time(gauge_content_difference PT1H)&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-02-08T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "mean(wind_speed P1D)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-08T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(wind_speed P1D)&timeoffsets=PT0H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P6M",
+            "timeSeriesId": 0,
+            "elementId": "mean(air_temperature_anomaly P6M 1961_1990)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(air_temperature_anomaly P6M 1961_1990)&timeoffsets=PT0H&timeresolutions=P6M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 0
+            },
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "surface_temperature",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=surface_temperature&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=0.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 0
+            },
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT10M",
+            "timeSeriesId": 0,
+            "elementId": "surface_temperature",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=surface_temperature&timeoffsets=PT0H&timeresolutions=PT10M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=0.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "min(relative_humidity P1M)",
+            "unit": "percent",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(relative_humidity P1M)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-02-08T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "min(wind_speed P1D)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-08T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(wind_speed P1D)&timeoffsets=PT0H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "mean(relative_humidity P1D)",
+            "unit": "percent",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(relative_humidity P1D)&timeoffsets=PT0H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-02-09T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "max(max(wind_speed PT1H) P1D)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-09T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(max(wind_speed PT1H) P1D)&timeoffsets=PT18H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "min(air_temperature PT1H)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(air_temperature PT1H)&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "battery_voltage",
+            "unit": "volt",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=battery_voltage&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT6H",
+            "timeResolution": "PT12H",
+            "timeSeriesId": 0,
+            "elementId": "sum(precipitation_amount PT12H)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=sum(precipitation_amount PT12H)&timeoffsets=PT6H&timeresolutions=PT12H&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-02-09T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "min(max(wind_speed PT1H) P1D)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-09T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(max(wind_speed PT1H) P1D)&timeoffsets=PT18H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "integral_of_excess(mean(air_temperature P1D) P1D 0.0)",
+            "unit": "degree-day",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=integral_of_excess(mean(air_temperature P1D) P1D 0.0)&timeoffsets=PT0H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "max(air_temperature P1M)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(air_temperature P1M)&timeoffsets=PT18H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "min(wind_speed_of_gust P1M)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(wind_speed_of_gust P1M)&timeoffsets=PT18H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "over_time(time_of_maximum_wind_speed P1M)",
+            "unit": "Date",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=over_time(time_of_maximum_wind_speed P1M)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1Y",
+            "timeSeriesId": 0,
+            "elementId": "mean(air_temperature_anomaly P1Y 1991_2020)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(air_temperature_anomaly P1Y 1991_2020)&timeoffsets=PT0H&timeresolutions=P1Y&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "sum(duration_of_precipitation PT1H)",
+            "unit": "minutes",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=sum(duration_of_precipitation PT1H)&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-02-09T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "mean(max(wind_speed PT1H) P1D)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-09T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(max(wind_speed PT1H) P1D)&timeoffsets=PT18H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "sum(precipitation_amount PT1H)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=sum(precipitation_amount PT1H)&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "integral_of_excess(mean(air_temperature P1D) P1M 0.0)",
+            "unit": "degree-day",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=integral_of_excess(mean(air_temperature P1D) P1M 0.0)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "over_time(time_of_minimum_air_temperature P1M)",
+            "unit": "Date",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=over_time(time_of_minimum_air_temperature P1M)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT10M",
+            "timeSeriesId": 0,
+            "elementId": "accumulated(precipitation_amount)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=accumulated(precipitation_amount)&timeoffsets=PT0H&timeresolutions=PT10M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "accumulated(precipitation_amount)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=accumulated(precipitation_amount)&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "mean(max(wind_speed P1D) P1M)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(max(wind_speed P1D) P1M)&timeoffsets=PT18H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1Y",
+            "timeSeriesId": 0,
+            "elementId": "integral_of_deficit(mean(air_temperature P1D) P1Y 17.0)",
+            "unit": "degree-day",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=integral_of_deficit(mean(air_temperature P1D) P1Y 17.0)&timeoffsets=PT0H&timeresolutions=P1Y&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-03-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "best_estimate_mean(air_temperature P1M)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-03-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=best_estimate_mean(air_temperature P1M)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "max(air_temperature PT1H)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(air_temperature PT1H)&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "max(relative_humidity P1D)",
+            "unit": "percent",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=max(relative_humidity P1D)&timeoffsets=PT0H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-01T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1M",
+            "timeSeriesId": 0,
+            "elementId": "mean(dew_point_temperature P1M)",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-01T00:00:00.000Z/9999-12-31T23:59:59Z&elements=mean(dew_point_temperature P1M)&timeoffsets=PT0H&timeresolutions=P1M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 2
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "min(relative_humidity P1D)",
+            "unit": "percent",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(relative_humidity P1D)&timeoffsets=PT0H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=2.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-02-07T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "wind_from_direction",
+            "unit": "degrees",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-07T00:00:00.000Z/9999-12-31T23:59:59Z&elements=wind_from_direction&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT10M",
+            "timeSeriesId": 0,
+            "elementId": "sum(precipitation_amount PT10M)",
+            "unit": "mm",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=sum(precipitation_amount PT10M)&timeoffsets=PT0H&timeresolutions=PT10M&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "validFrom": "2018-02-06T00:00:00.000Z",
+            "timeOffset": "PT0H",
+            "timeResolution": "PT1H",
+            "timeSeriesId": 0,
+            "elementId": "dew_point_temperature",
+            "unit": "degC",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-06T00:00:00.000Z/9999-12-31T23:59:59Z&elements=dew_point_temperature&timeoffsets=PT0H&timeresolutions=PT1H&timeseriesids=0&performancecategories=C&exposurecategories=2"
+        },
+        {
+            "sourceId": "SN46220:0",
+            "level": {
+                "levelType": "height_above_ground",
+                "unit": "m",
+                "value": 10
+            },
+            "validFrom": "2018-02-09T00:00:00.000Z",
+            "timeOffset": "PT18H",
+            "timeResolution": "P1D",
+            "timeSeriesId": 0,
+            "elementId": "min(wind_speed_of_gust P1D)",
+            "unit": "m/s",
+            "performanceCategory": "C",
+            "exposureCategory": "2",
+            "status": "Authoritative",
+            "uri": "https://frost.met.no/observations/v0.jsonld?sources=SN46220:0&referencetime=2018-02-09T00:00:00.000Z/9999-12-31T23:59:59Z&elements=min(wind_speed_of_gust P1D)&timeoffsets=PT18H&timeresolutions=P1D&timeseriesids=0&performancecategories=C&exposurecategories=2&levels=10.0"
+        }
+    ]
+}%                                                                              tor.inge.jossang@aftenbladet.no@A121779-NO ~ % 
