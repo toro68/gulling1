@@ -1,12 +1,12 @@
 # Kjernepakker for databehandling
-numpy==1.24.3
+numpy>=1.26.0
 pandas==2.0.3
 plotly==5.15.0
 psutil==5.9.5
 
 # API og nettverkshåndtering
 requests==2.31.0
-urllib3==2.0.4
+urllib3<2.0.0
 
 # Jupyter og notebook-støtte
 jupyter==1.0.0
