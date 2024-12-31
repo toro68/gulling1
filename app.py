@@ -9,6 +9,70 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+def display_user_guide():
+    """Viser brukerveiledning for appen."""
+    with st.expander("ℹ️ Om risiko for snøfokk og glatt", expanded=False):
+        st.markdown("""
+        ### ❄️ Risikovurdering for vinterføre
+        
+        *Kriteriene er utviklet gjennom analyse av værdata og faktiske hendelser siden 2018. Systemet er selvlærende og justeres løpende basert på tilbakemeldinger fra brukere og validering mot reelle situasjoner. Dette sikrer stadig mer presise varsler.*
+        
+        #### 🌨️ Snøfokk
+        Varselet beregner risiko basert på flere faktorer:
+        
+        **Vindforhold:**
+        - Moderat vind (>7.8 m/s): Økende risiko
+        - Sterk vind (>10.6 m/s): Høy risiko
+        - Kraftige vindkast (>17 m/s): Ekstra risiko
+        
+        **Temperatur:**
+        - Mellom -2.2°C og 0°C: Gradvis økende risiko
+        - Under -2.2°C: Høy risiko (tørr og lett snø)
+        
+        **Snødybde-endring:**
+        - Under 0.8 cm: Lav risiko
+        - Mellom 0.8 og 1.6 cm: Moderat risiko
+        - Over 1.6 cm: Høy risiko
+        
+        **Luftfuktighet:**
+        - Under 85%: Øker risiko (tørrere snø)
+        
+        *Risikoen vektes med 40% vind, 30% temperatur og 30% snødybde.*
+        
+        #### 🌡️ Glatte veier
+        Varselet analyserer flere kritiske faktorer:
+        
+        **Temperatur:**
+        - Mellom 0°C og +6°C: Ideelt for isdannelse
+        - Høyest risiko rundt +2-3°C
+        
+        **Fuktighet og nedbør:**
+        - Luftfuktighet over 80%
+        - Minst 1.5mm nedbør siste 3 timer
+        
+        **Snøforhold:**
+        - Snødybde over 10 cm
+        - Minkende snødybde (aktiv smelting)
+        
+        *Risikoen er høyest når alle kriteriene er oppfylt samtidig.*
+        
+        #### ⚠️ Viktig å vite
+        - Varslene er basert på værdata fra nærmeste målestasjon
+        - Lokale forhold kan variere betydelig
+        - Bruk varslene som veiledende informasjon
+        - Følg alltid med på offisielle varsler
+        - Oppdateres automatisk hver time
+        - Varslingskriteriene valideres og forbedres kontinuerlig mot faktiske forhold
+        
+        #### 📊 Slik tolker du grafene
+        - **Søyler**: Viser risiko fra 0-100%
+        - **Farger**: 
+          - 🔴 Rød (>75%): Høy risiko
+          - 🟡 Gul (50-75%): Moderat risiko
+          - 🟢 Grønn (<50%): Lav risiko
+        - **Detaljer**: Hold musepekeren over søylene for mer informasjon
+        """)
+
 def main():
     # Sett opp sidekonfigurasjon
     st.set_page_config(
@@ -19,6 +83,9 @@ def main():
     
     # Vis header
     st.title("❄️ Vinterføre")
+    
+    # Vis brukerveiledning
+    display_user_guide()
     
     col1, _ = st.columns(2)
     with col1:
