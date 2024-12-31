@@ -11,7 +11,16 @@ Any changes to these parameters must be approved and documented.
 from dataclasses import dataclass, field
 import os
 from typing import Dict
+from enum import Enum
 import streamlit as st
+
+
+class TimeResolution(Enum):
+    TEN_MINUTES = "PT10M"
+    ONE_HOUR = "PT1H"
+    TWELVE_HOURS = "PT12H"
+    ONE_DAY = "P1D"
+    ONE_MONTH = "P1M"
 
 
 @dataclass
