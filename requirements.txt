@@ -22,7 +22,7 @@ pytest==7.4.2
 black==23.9.1
 
 # Streamlit for visualisering
-streamlit==1.27.2
+streamlit==1.41.1
 
 # Tidsserie-håndtering
 pytz==2023.3.post1
