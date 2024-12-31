@@ -1,3 +1,7 @@
+# Bygge-verktøy
+setuptools==69.2.0
+wheel==0.42.0
+
 # Kjernepakker for databehandling
 numpy==1.26.4
 pandas==2.2.1
