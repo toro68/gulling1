@@ -8,7 +8,7 @@ This configuration is optimized for:
 Any changes to these parameters must be approved and documented.
 """
 
-import logging
+import logging.config
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from enum import Enum
@@ -17,7 +17,33 @@ import os
 import streamlit as st
 
 # Configure logging
-logging.basicConfig(level=logging.INFO)
+LOGGING_CONFIG = {
+    'version': 1,
+    'formatters': {
+        'detailed': {
+            'format': '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+        }
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'detailed'
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': 'frost.log',
+            'formatter': 'detailed'
+        }
+    },
+    'loggers': {
+        'frost': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO'
+        }
+    }
+}
+
+logging.config.dictConfig(LOGGING_CONFIG)
 logger = logging.getLogger(__name__)
 
 
@@ -295,3 +321,77 @@ class FrostConfig:
                         )
 
         return alerts
+
+    def validate_environment(self) -> None:
+        """Validerer nødvendige miljøvariabler."""
+        if not self.CLIENT_ID:
+            raise ValueError(
+                "FROST_CLIENT_ID mangler. Sett miljøvariabel eller legg til i .streamlit/secrets.toml"
+            )
+
+    def __init__(self):
+        # Oppdater snøfokk-terskelverdier med mer detaljerte parametre
+        self.snow_drift_thresholds = {
+            # Vindparametre
+            'wind_strong': 10.61,      # m/s
+            'wind_moderate': 7.77,     # m/s
+            'wind_gust': 16.96,        # m/s
+            'wind_dir_change': 37.83,  # grader
+            'wind_weight': 0.4,        # vekting i total risiko
+
+            # Temperaturparametre
+            'temp_cold': -2.2,         # °C
+            'temp_cool': 0,            # °C
+            'temp_weight': 0.3,        # vekting i total risiko
+
+            # Snøparametre
+            'snow_high': 1.61,         # cm
+            'snow_moderate': 0.84,     # cm
+            'snow_low': 0.31,          # cm
+            'snow_weight': 0.3,        # vekting i total risiko
+
+            # Andre parametre
+            'min_duration': 2,         # timer
+            'humidity_max': 85         # prosent
+        }
+
+        # Parameterområder for optimalisering
+        self.snow_drift_param_ranges = {
+            'wind_strong': (8.0, 15.0),
+            'wind_moderate': (5.0, 10.0),
+            'wind_gust': (12.0, 20.0),
+            'wind_dir_change': (20.0, 45.0),
+            'wind_weight': (0.3, 0.5),
+            'temp_cold': (-5.0, -1.0),
+            'temp_cool': (-2.0, 2.0),
+            'temp_weight': (0.2, 0.4),
+            'snow_high': (1.0, 2.0),
+            'snow_moderate': (0.5, 1.5),
+            'snow_low': (0.2, 0.8),
+            'snow_weight': (0.2, 0.4),
+            'min_duration': (2, 4)
+        }
+
+        # Oppdater ELEMENTS med alle nødvendige elementer
+        self.ELEMENTS.update({
+            'max(wind_speed PT1H)': {
+                'unit': 'm/s',
+                'level': {'height_above_ground': 10},
+                'resolutions': ['PT1H']
+            },
+            'min(air_temperature PT1H)': {
+                'unit': 'degC',
+                'level': {'height_above_ground': 2},
+                'resolutions': ['PT1H']
+            },
+            'max(air_temperature PT1H)': {
+                'unit': 'degC',
+                'level': {'height_above_ground': 2},
+                'resolutions': ['PT1H']
+            },
+            'sum(duration_of_precipitation PT1H)': {
+                'unit': 'minutes',
+                'level': None,
+                'resolutions': ['PT1H']
+            }
+        })

@@ -1,17 +1,26 @@
 import streamlit as st
-from datetime import datetime
 import pandas as pd
-from frost.visualization.weather import WeatherVisualizer, get_cached_weather_data
-from frost.config import FrostConfig
+from frost.visualization.weather import (
+    WeatherVisualizer,
+    get_cached_weather_data
+)
 from utils.gps_utils import get_last_gps_activity
 import logging
 
 logger = logging.getLogger(__name__)
 
 def main():
-    st.title("Værdata fra Gullingen")
+    # Sett opp sidekonfigurasjon
+    st.set_page_config(
+        page_title="Vinterføre",
+        page_icon="❄️",
+        layout="wide"
+    )
     
-    col1, col2 = st.columns(2)
+    # Vis header
+    st.title("❄️ Vinterføre")
+    
+    col1, _ = st.columns(2)
     with col1:
         period_type = st.selectbox(
             "Velg periode:",
@@ -30,18 +39,50 @@ def main():
         
         if period_type == "Været siden sist brøyting":
             try:
-                last_gps_time = get_last_gps_activity()
-                if last_gps_time:
-                    start_datetime = last_gps_time
-                    end_datetime = now
-                    st.info(f"Siste brøyting: {last_gps_time.strftime('%Y-%m-%d %H:%M')}")
+                # Kjør script for å hente siste brøytetidspunkt
+                import subprocess
+                import os
+                
+                # Få absolutt sti til scriptet
+                script_path = os.path.join(os.path.dirname(__file__), 'scripts/check_last_plowing.py')
+                logger.info(f"Prøver å kjøre script: {script_path}")
+                
+                result = subprocess.run(
+                    ['python3', script_path], 
+                    capture_output=True, 
+                    text=True
+                )
+                
+                # Logg resultatet
+                logger.info(f"Script returnerte kode: {result.returncode}")
+                logger.info(f"Script stdout: {result.stdout}")
+                if result.stderr:
+                    logger.error(f"Script stderr: {result.stderr}")
+                
+                if result.returncode == 0 and "Siste brøyting:" in result.stdout:
+                    # Parse output for å finne tidspunktet
+                    import re
+                    match = re.search(r'Siste brøyting: (\d{2}\.\d{2}\.\d{4}) kl\. (\d{2}:\d{2})', result.stdout)
+                    if match:
+                        date_str = match.group(1)
+                        time_str = match.group(2)
+                        last_plow_time = pd.Timestamp(f"{date_str} {time_str}", tz='Europe/Oslo')
+                        start_datetime = last_plow_time
+                        end_datetime = now
+                        st.info(
+                            f"Siste brøyting: {last_plow_time.strftime('%Y-%m-%d %H:%M')}"
+                        )
+                    else:
+                        st.warning("Kunne ikke tolke brøytetidspunkt - viser siste 24 timer")
+                        start_datetime = now - pd.Timedelta(hours=24)
+                        end_datetime = now
                 else:
-                    st.warning("GPS-data ikke tilgjengelig - viser siste 24 timer")
+                    st.warning("Kunne ikke hente brøytedata - viser siste 24 timer")
                     start_datetime = now - pd.Timedelta(hours=24)
                     end_datetime = now
             except Exception as e:
-                logger.error(f"Feil ved henting av GPS-data: {e}")
-                st.warning("Kunne ikke hente GPS-data - viser siste 24 timer")
+                logger.error(f"Feil ved henting av brøytedata: {e}")
+                st.warning("Kunne ikke hente brøytedata - viser siste 24 timer")
                 start_datetime = now - pd.Timedelta(hours=24)
                 end_datetime = now
         elif period_type == "Egendefinert periode":
@@ -59,7 +100,10 @@ def main():
                     key="end_date"
                 )
             start_datetime = pd.Timestamp(start_date, tz='Europe/Oslo')
-            end_datetime = pd.Timestamp(end_date, tz='Europe/Oslo').replace(hour=23, minute=59)
+            end_datetime = pd.Timestamp(end_date, tz='Europe/Oslo').replace(
+                hour=23,
+                minute=59
+            )
         else:
             if period_type == "Siste 24 timer":
                 start_datetime = now - pd.Timedelta(hours=24)
@@ -73,28 +117,24 @@ def main():
             df = get_cached_weather_data(start_datetime, end_datetime)
             
             if df is not None and not df.empty:
-                visualizer = WeatherVisualizer(None)
-                visualizer.df = df
+                visualizer = WeatherVisualizer(df)
                 
                 # Vis væradvarsler først
                 visualizer.display_weather_alerts()
                 
-                # Deretter vis grafer
-                try:
-                    fig = visualizer.create_improved_graph()
-                    if fig is not None:
-                        st.plotly_chart(fig, use_container_width=True)
-                    else:
-                        st.warning("Kunne ikke opprette graf")
-                except Exception as e:
-                    st.error(f"Feil ved visning av graf: {str(e)}")
-                    logger.exception("Graf-feil:")
+                # Vis graf og håndter resultatet
+                if visualizer.create_improved_graph():
+                    # Graf ble opprettet vellykket - ikke vis feilmelding
+                    pass
+                else:
+                    # Graf kunne ikke opprettes - feilmelding er allerede vist av WeatherVisualizer
+                    pass
             else:
                 st.error("Ingen data tilgjengelig for valgt periode")
     
     except Exception as e:
-        st.error(f"En feil oppstod: {str(e)}")
-        logger.exception("Hovedfeil:")
+        st.error("En feil oppstod i applikasjonen. Vennligst prøv igjen senere.")
+        logger.exception("Uventet feil i hovedapplikasjonen:")
 
 if __name__ == "__main__":
     main()
